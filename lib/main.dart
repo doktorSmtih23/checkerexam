@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ExamScreen(),
+      home: const ExamScreen(),
     );
   }
 }
@@ -339,7 +339,7 @@ class _ExamScreenState extends State<ExamScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                   textStyle: const TextStyle(fontSize: 18),
                 ),
-                child: Text('Corregir Examen'),
+                child: const Text('Corregir Examen'),
               ),
             ),
           ],
