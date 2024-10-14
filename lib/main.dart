@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
 }
 
 class ExamScreen extends StatefulWidget {
+  const ExamScreen({super.key});
+
   @override
   _ExamScreenState createState() => _ExamScreenState();
 }
@@ -251,7 +255,7 @@ class _ExamScreenState extends State<ExamScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Corregir Examen'),
+        title: const Text('Corregir Examen'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -273,13 +277,13 @@ class _ExamScreenState extends State<ExamScreen> {
                 });
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
                 itemCount: 70,
                 itemBuilder: (context, index) {
                   return Card(
-                    margin: EdgeInsets.symmetric(vertical: 8.0),
+                    margin: const EdgeInsets.symmetric(vertical: 8.0),
                     elevation: 4,
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
@@ -288,13 +292,13 @@ class _ExamScreenState extends State<ExamScreen> {
                         children: [
                           Text(
                             'Pregunta ${index + 1}',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
                             ),
                           ),
-                          SizedBox(
-                            height: 18,
+                          const SizedBox(
+                            height: 20,
                           ),
                           Row(
                             children: ['a', 'b', 'c', 'd'].map((String answer) {
@@ -312,7 +316,7 @@ class _ExamScreenState extends State<ExamScreen> {
                                     ),
                                     Text(
                                       answer.toUpperCase(),
-                                      style: TextStyle(fontSize: 16),
+                                      style: const TextStyle(fontSize: 16),
                                     ),
                                   ],
                                 ),
@@ -331,11 +335,11 @@ class _ExamScreenState extends State<ExamScreen> {
                 onPressed: () {
                   _checkAnswers();
                 },
-                child: Text('Corregir Examen'),
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                  textStyle: TextStyle(fontSize: 18),
+                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  textStyle: const TextStyle(fontSize: 18),
                 ),
+                child: Text('Corregir Examen'),
               ),
             ),
           ],
@@ -364,7 +368,7 @@ class _ExamScreenState extends State<ExamScreen> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: Text('Resultados'),
+            title: const Text('Resultados'),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -381,7 +385,7 @@ class _ExamScreenState extends State<ExamScreen> {
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           );
