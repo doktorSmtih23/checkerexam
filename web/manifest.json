@@ -1,7 +1,7 @@
 {
     "name": "exam_checker_app",
     "short_name": "exam_checker_app",
-    "start_url": "https://doktorsmtih23.github.io/my-pwa/",
+    "start_url": "https://doktorsmtih23.github.io/checkerexam/",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
