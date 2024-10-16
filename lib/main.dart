@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Corregidor Simulacro',
+      title: 'Corregidor Simulacros',
       theme: ThemeData(
         brightness: Brightness.dark,
         primarySwatch: Colors.blue,
