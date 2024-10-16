@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Examen Corregidor',
       theme: ThemeData(
+        brightness: Brightness.dark,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
@@ -255,7 +256,10 @@ class _ExamScreenState extends State<ExamScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Corregir Examen'),
+        title: Text(
+          'Ingrese las respuestas',
+          style: TextStyle(color: Colors.amber.shade900, fontSize: 26),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -293,9 +297,9 @@ class _ExamScreenState extends State<ExamScreen> {
                           Text(
                             'Pregunta ${index + 1}',
                             style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                                color: Colors.green),
                           ),
                           const SizedBox(
                             height: 20,
@@ -316,7 +320,9 @@ class _ExamScreenState extends State<ExamScreen> {
                                     ),
                                     Text(
                                       answer.toUpperCase(),
-                                      style: const TextStyle(fontSize: 16),
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.yellow.shade900),
                                     ),
                                   ],
                                 ),
@@ -336,7 +342,8 @@ class _ExamScreenState extends State<ExamScreen> {
                   _checkAnswers();
                 },
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                   textStyle: const TextStyle(fontSize: 18),
                 ),
                 child: const Text('Corregir Examen'),
@@ -372,12 +379,23 @@ class _ExamScreenState extends State<ExamScreen> {
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('Has acertado $correctCount de 70 preguntas.'),
                 Text(
-                    'Porcentaje de aciertos: ${percentage.toStringAsFixed(2)}%'),
+                  'Has acertado $correctCount de 70 preguntas.',
+                  style: TextStyle(fontSize: 20),
+                ),
+                SizedBox(height: 8),
+                Text(
+                  'Porcentaje de aciertos: ${percentage.toStringAsFixed(3)}%',
+                  style: TextStyle(color: Colors.green, fontSize: 20),
+                ),
                 if (incorrectQuestions.isNotEmpty)
-                  Text(
-                      'Respuestas incorrectas: ${incorrectQuestions.join(', ')}'),
+                  SizedBox(
+                    height: 8,
+                  ),
+                Text(
+                  'Respuestas incorrectas: ${incorrectQuestions.join(', ')}',
+                  style: TextStyle(color: Colors.red, fontSize: 20),
+                ),
               ],
             ),
             actions: [
