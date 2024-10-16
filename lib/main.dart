@@ -308,6 +308,7 @@ class _ExamScreenState extends State<ExamScreen> {
                             children: ['a', 'b', 'c', 'd'].map((String answer) {
                               return Expanded(
                                 child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Radio<String>(
                                       value: answer,
@@ -383,7 +384,7 @@ class _ExamScreenState extends State<ExamScreen> {
                   'Has acertado $correctCount de 70 preguntas.',
                   style: TextStyle(fontSize: 20),
                 ),
-                SizedBox(height: 8),
+                SizedBox(height: 12),
                 Text(
                   'Porcentaje de aciertos: ${percentage.toStringAsFixed(3)}%',
                   style: TextStyle(color: Colors.green, fontSize: 20),
