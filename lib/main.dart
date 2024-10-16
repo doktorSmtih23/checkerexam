@@ -302,7 +302,7 @@ class _ExamScreenState extends State<ExamScreen> {
                                 color: Colors.green),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 22,
                           ),
                           Row(
                             children: ['a', 'b', 'c', 'd'].map((String answer) {
