@@ -376,7 +376,10 @@ class _ExamScreenState extends State<ExamScreen> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: const Text('Resultados'),
+            title: const Text(
+              'Resultados',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
