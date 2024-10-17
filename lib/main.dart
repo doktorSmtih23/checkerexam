@@ -384,7 +384,7 @@ class _ExamScreenState extends State<ExamScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  'Has acertado $correctCount de 70 preguntas.',
+                  'Has acertado $correctCount de 70  preguntas.',
                   style: TextStyle(fontSize: 20),
                 ),
                 SizedBox(height: 12),
