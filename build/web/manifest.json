@@ -1,7 +1,7 @@
 {
     "name": "exam_checker_app",
     "short_name": "exam_checker_app",
-    "start_url": "/index.html",
+    "start_url": "build/web/index.html",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
